@@ -1,0 +1,25 @@
+
+#spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+#spring.datasource.jdbc-url=jdbc:oracle:thin:@localhost:1521/orcl
+
+#### Bybatis 로그 설정 ################################################
+#spring.datasource.driver-class-name=net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+#spring.datasource.jdbc-url=jdbc:log4jdbc:thin:@localhost:1521/orcl
+###########################################################################
+#spring.datasource.username=c##pb800797
+#spring.datasource.password=1234
+
+spring:
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    jdbc-url: jdbc:log4jdbc:oracle:thin:@localhost:1521/orcl?allowMultiQueries=true
+    username: c##pb800797
+    password: 1234
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+# logback 위치 지정
+logging:
+  config: classpath:logback/logback-default.xml
+
