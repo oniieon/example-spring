@@ -20,7 +20,7 @@
             <if test="@org.apache.commons.lang3.ObjectUtils@isNotEmpty(parameter.boardTypes)">
                 AND B.BOARD_TYPE IN (
                 <foreach  collection="boardTypes" item="value" separator=", ">
-                    #{value}
+                    #{value }
                 </foreach>
                 )
             </if>
